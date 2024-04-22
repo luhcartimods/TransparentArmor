@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "combat",
+  "ingredients": [
+    {
+      "item": "transparentarmor:transparent_diamond_leggings"
+    }
+  ],
+  "result": {
+    "item": "minecraft:diamond_leggings"
+  }
+}
+

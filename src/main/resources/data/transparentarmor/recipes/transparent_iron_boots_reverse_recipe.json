@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "combat",
+  "ingredients": [
+    {
+      "item": "transparentarmor:transparent_iron_boots"
+    }
+  ],
+  "result": {
+    "item": "minecraft:iron_boots"
+  }
+}
+

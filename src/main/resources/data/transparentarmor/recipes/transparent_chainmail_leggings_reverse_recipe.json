@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "combat",
+  "ingredients": [
+    {
+      "item": "transparentarmor:transparent_chainmail_leggings"
+    }
+  ],
+  "result": {
+    "item": "minecraft:chainmail_leggings"
+  }
+}
+

@@ -1,0 +1,33 @@
+{
+  "item.transparentarmor.transparent_diamond_helmet": "Transparent Diamond Helmet",
+  "item.transparentarmor.transparent_diamond_chestplate": "Transparent Diamond Chestplate",
+  "item.transparentarmor.transparent_diamond_leggings": "Transparent Diamond Leggings",
+  "item.transparentarmor.transparent_diamond_boots": "Transparent Diamond Boots",
+
+  "item.transparentarmor.transparent_golden_helmet": "Transparent Golden Helmet",
+  "item.transparentarmor.transparent_golden_chestplate": "Transparent Golden Chestplate",
+  "item.transparentarmor.transparent_golden_leggings": "Transparent Golden Leggings",
+  "item.transparentarmor.transparent_golden_boots": "Transparent Golden Boots",
+
+  "item.transparentarmor.transparent_iron_helmet": "Transparent Iron Helmet",
+  "item.transparentarmor.transparent_iron_chestplate": "Transparent Iron Chestplate",
+  "item.transparentarmor.transparent_iron_leggings": "Transparent Iron Leggings",
+  "item.transparentarmor.transparent_iron_boots": "Transparent Iron Boots",
+
+  "item.transparentarmor.transparent_leather_cap": "Transparent Leather Cap",
+  "item.transparentarmor.transparent_leather_tunic": "Transparent Leather Tunic",
+  "item.transparentarmor.transparent_leather_pants": "Transparent Leather Pants",
+  "item.transparentarmor.transparent_leather_boots": "Transparent Leather Boots",
+
+  "item.transparentarmor.transparent_chainmail_helmet": "Transparent Chainmail Helmet",
+  "item.transparentarmor.transparent_chainmail_chestplate": "Transparent Chainmail Chestplate",
+  "item.transparentarmor.transparent_chainmail_leggings": "Transparent Chainmail Leggings",
+  "item.transparentarmor.transparent_chainmail_boots": "Transparent Chainmail Boots",
+
+  "item.transparentarmor.transparent_netherite_helmet": "Transparent Netherite Helmet",
+  "item.transparentarmor.transparent_netherite_chestplate": "Transparent Netherite Chestplate",
+  "item.transparentarmor.transparent_netherite_leggings": "Transparent Netherite Leggings",
+  "item.transparentarmor.transparent_netherite_boots": "Transparent Netherite Boots",
+
+  "creativetab.end_tab": "Transparent Armors"
+}
