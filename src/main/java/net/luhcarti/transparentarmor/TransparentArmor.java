@@ -1,19 +1,9 @@
 package net.luhcarti.transparentarmor;
 
 import com.mojang.logging.LogUtils;
-import net.luhcarti.transparentarmor.item.ModCreativeModeTabs;
 import net.luhcarti.transparentarmor.item.ModItems;
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -42,18 +32,12 @@ public class TransparentArmor
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        modEventBus.addListener(this::addCreative);
-
         ModItems.register(modEventBus);
-
-        ModCreativeModeTabs.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-    }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {

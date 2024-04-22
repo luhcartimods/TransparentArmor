@@ -3,73 +3,78 @@ package net.luhcarti.transparentarmor.item;
 import net.luhcarti.transparentarmor.TransparentArmor;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.ArmorItem;
+import net.minecraft.util.LazyLoadedValue;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public enum LeatherTransparent implements ArmorMaterial {
-    TRANSPARENT_LEATHER("transparent_leather", 1, new int[]{ 1, 3, 2, 1 }, 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0f, 0);
+import java.util.function.Supplier;
 
+public enum LeatherTransparent implements ArmorMaterial {
+    TRANSPARENT_LEATHER("transparent_leather",  new int[]{1, 3, 2, 1}, 15, SoundEvents.ARMOR_EQUIP_LEATHER,
+            0F, 0.0F, () -> Ingredient.of(Items.LEATHER));
+
+    private static final int[] HEALTH_PER_SLOT = new int[]{65, 75, 80, 55};
     private final String name;
-    private final int durabilityMultiplier;
-    private final int[] protectionAmounts;
+    private final int[] slotProtections;
     private final int enchantmentValue;
-    private final SoundEvent equipSound;
+    private final SoundEvent sound;
     private final float toughness;
     private final float knockbackResistance;
+    private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    private static final int[] BASE_DURABILITY = { 55, 80, 75, 65 };
+    LeatherTransparent(String p_40474_, int[] p_40476_, int p_40477_,
+                       SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
+        this.name = p_40474_;
+        this.slotProtections = p_40476_;
+        this.enchantmentValue = p_40477_;
+        this.sound = p_40478_;
+        this.toughness = p_40479_;
+        this.knockbackResistance = p_40480_;
+        this.repairIngredient = new LazyLoadedValue<>(p_40481_);
+    }
 
+    LeatherTransparent(String ironTransparent, int i, int[] ints, int i1, SoundEvent armorEquipGold, float v, float v1, Object o, String name, int durabilityMultiplier, int[] slotProtections, int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance, LazyLoadedValue<Ingredient> repairIngredient) {
 
-    LeatherTransparent(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantmentValue, SoundEvent equipSound, float toughness, float knockbackResistance) {
         this.name = name;
-        this.durabilityMultiplier = durabilityMultiplier;
-        this.protectionAmounts = protectionAmounts;
+        this.slotProtections = slotProtections;
         this.enchantmentValue = enchantmentValue;
-        this.equipSound = equipSound;
+        this.sound = sound;
         this.toughness = toughness;
         this.knockbackResistance = knockbackResistance;
+        this.repairIngredient = repairIngredient;
     }
 
-    @Override
-    public int getDurabilityForType(ArmorItem.Type type) {
-        return BASE_DURABILITY[type.ordinal()] * this.durabilityMultiplier;
+    public int getDurabilityForSlot(EquipmentSlot pSlot) {
+        return HEALTH_PER_SLOT[pSlot.getIndex()];
     }
 
-    @Override
-    public int getDefenseForType(ArmorItem.Type type) {
-        return this.protectionAmounts[type.ordinal()];
+    public int getDefenseForSlot(EquipmentSlot pSlot) {
+        return this.slotProtections[pSlot.getIndex()];
     }
 
-    @Override
     public int getEnchantmentValue() {
-        return enchantmentValue;
+        return this.enchantmentValue;
     }
 
-    @Override
     public SoundEvent getEquipSound() {
-        return SoundEvents.ARMOR_EQUIP_LEATHER;
+        return this.sound;
     }
 
-    @Override
     public Ingredient getRepairIngredient() {
         return Ingredient.of(Items.LEATHER);
     }
 
-    @Override
     public String getName() {
         return TransparentArmor.MOD_ID + ":" + this.name;
     }
 
-    @Override
     public float getToughness() {
         return this.toughness;
     }
 
-    @Override
     public float getKnockbackResistance() {
         return this.knockbackResistance;
     }
 }
-
