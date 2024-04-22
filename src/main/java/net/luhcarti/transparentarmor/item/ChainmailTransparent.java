@@ -9,7 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public enum ChainmailTransparent implements ArmorMaterial {
-    TRANSPARENT_CHAINMAIL("transparent_chainmail", 15, new int[]{ 2, 5, 4, 1 }, 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0f, 0);
+    TRANSPARENT_CHAINMAIL("transparent_chainmail", 1, new int[]{ 2, 5, 4, 1 }, 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0f, 0);
 
     private final String name;
     private final int durabilityMultiplier;
@@ -19,7 +19,7 @@ public enum ChainmailTransparent implements ArmorMaterial {
     private final float toughness;
     private final float knockbackResistance;
 
-    private static final int[] BASE_DURABILITY = { 77, 112, 105, 91 };
+    private static final int[] BASE_DURABILITY = {165, 240, 225, 195};
 
 
     ChainmailTransparent(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantmentValue, SoundEvent equipSound, float toughness, float knockbackResistance) {

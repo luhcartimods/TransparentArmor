@@ -9,7 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public enum IronTransparent implements ArmorMaterial {
-    TRANSPARENT_IRON("transparent_iron", 15, new int[]{ 2, 6, 5, 2 }, 9, SoundEvents.ARMOR_EQUIP_IRON, 0f, 0);
+    TRANSPARENT_IRON("transparent_iron", 1, new int[]{ 2, 6, 5, 2 }, 9, SoundEvents.ARMOR_EQUIP_IRON, 0f, 0);
 
     private final String name;
     private final int durabilityMultiplier;

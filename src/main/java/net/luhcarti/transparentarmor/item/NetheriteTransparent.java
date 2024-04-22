@@ -9,7 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public enum NetheriteTransparent implements ArmorMaterial {
-    TRANSPARENT_NETHERITE("transparent_netherite", 37, new int[]{ 3, 8, 6, 3 }, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f);
+    TRANSPARENT_NETHERITE("transparent_netherite", 1, new int[]{ 3, 8, 6, 3 }, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f);
 
     private final String name;
     private final int durabilityMultiplier;

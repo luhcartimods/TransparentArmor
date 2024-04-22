@@ -9,7 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public enum LeatherTransparent implements ArmorMaterial {
-    TRANSPARENT_LEATHER("transparent_leather", 15, new int[]{ 1, 3, 2, 1 }, 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0f, 0);
+    TRANSPARENT_LEATHER("transparent_leather", 1, new int[]{ 1, 3, 2, 1 }, 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0f, 0);
 
     private final String name;
     private final int durabilityMultiplier;
